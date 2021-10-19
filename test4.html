@@ -1,0 +1,26 @@
+<html>
+<head>
+	<script>
+		getData=()=>
+		{
+			var message="Hi How are you Today?";
+			var msg=message.split(" ");//string to array
+			var data="";
+		for( var i=0;i<msg.length;i++)
+		{
+			data=data+"<p>"+msg[i]+"</p>";
+		}
+		document.getElementById("abc").innerHTML=data;
+		}
+	</script>
+</head>
+<body>
+<center>
+	<h1>String Array Example</h1>
+	<button onclick="getData()">Show Message</button>
+	
+	<br/><br/>
+	<div id="abc"></div>
+</center>
+</body>
+</html>

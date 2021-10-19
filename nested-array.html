@@ -1,0 +1,57 @@
+<html>
+<head>
+	<link rel="stylesheet" href="dist/css/bootstrap.css">
+	<script>
+		var item=[
+		{ "category":"Mobile",
+		"product":["Nokia","Lenovo","Samsung"]},
+		{
+			"category":"Book",
+			"product":["Java","Python","Nodejs"]},
+		{
+			"category":"Laptop",
+			"product":["HP","Dell","Samsung","Intex"]},
+		{
+			"category":"Cloths",
+			"product":["male","female","child"]}
+		];
+		getCategory=()=>
+		{
+			var data="";
+			for(var i=0;i<item.length;i++)
+			{
+				data=data +"<button onClick='getProduct("+i+")'  class='btn btn-primary m-2'>" +item[i].category+"-"+item[i].product.length +"</button>";
+
+			}
+			document.getElementById("catlist").innerHTML=data;
+
+		}
+		getProduct=(index =0)=>
+		{
+			var data="<h3>Available Product</h3>";
+			for (var i=0;i<item[index].product.length;i++)
+			{
+
+				data=data+"<p class='border p-3'>" +item[index].product[i]+"</p>";
+
+			}
+			data=data+"<button class='btn btn-danger btn-block'> Total Product-"+item[index].product.length+"</button>";
+			document.getElementById("productlist").innerHTML=data;
+		}
+	</script>
+</head>
+<body class="bg-light" onload="getCategory(),getProduct()">
+<div class="container mt-2">
+	<div class="row">
+		<div class="col-md-2"></div>
+		<div class="col-md-8">
+			<div class="p-3 bg-white text-center" id="catlist"></div>
+			<div id="productlist" class="mt-3"></div>
+
+		</div>
+		<div class="col-md-2"></div>
+	</div>
+</div>
+<
+</body>
+</html>

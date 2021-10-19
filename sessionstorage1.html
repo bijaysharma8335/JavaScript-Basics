@@ -1,0 +1,38 @@
+<html>
+<head>
+	<script>
+		Save=()=>
+		{
+			var a=document.getElementById("fname").value;
+			sessionStorage.setItem("name",a);
+
+
+			var b=document.getElementById("city").value;
+			sessionStorage.setItem("city",b);
+
+			var c=document.getElementById("age").value;
+			sessionStorage.setItem("age",c);
+
+			var d=document.getElementById("edu").value;
+			sessionStorage.setItem("edu",d);
+
+			
+			alert("Data stored in sessionStorage");
+			window.location.href="sessionfetch.html";
+		}
+	</script>
+</head>
+<body>
+		<h1>Session Storage Use to store data in browser Memory</h1>
+		<p>Session Storage will erase data from memory if browser get close</p>
+		<p>sessionStorage.setItem();Use to store the data</p>
+		<p>sessionStorage.getItem();Use to fetch the data</p>
+		<p>sessionStorage.clear();Use to delete all the data</p>
+		<p>Full Name:<input type="text" id="fname"/> </p>
+		<p>City:<input type="text" id="city"/></p>
+		<p>Age:<input type="text" id="age"/></p>
+		<p>Education:<input type="text" id="edu"/></p>
+
+		<button onclick="Save()">Save Data</button>
+</body>
+</html>

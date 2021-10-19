@@ -1,0 +1,49 @@
+<html>
+<head>
+	<script>
+	one=()=>
+	{
+document.getElementById("abc").type="Password";
+
+	}	
+	two=()=>
+	{
+document.getElementById("abc").type="text";
+
+	}
+	three=()=>
+	{
+document.getElementById("abc").size=100;
+
+	}
+	four=()=>
+	{
+document.getElementById("abc").style.border="10px solid red";
+
+	}
+
+/*if property exist in html then 
+	document.getElementById("id").property = "new value"
+
+if property not exist in html then
+	document.getElementById("id").style.property="new value"
+*/
+	</script>
+</head>
+<body>
+<center>
+	
+	<h1>Different type of property binding using javascript</h1>
+	<input type="text" id="abc" value="123456" class="abc"
+	size="20"  border="10px solid red"/>
+	<p>
+		<button onclick="one()">Password</button>
+		<button onclick="two()">Text</button>
+		<button onclick="three()">Re-size</button>
+		<button onclick="four()">Apply Border</button>
+
+
+</p>
+</center>
+</body>
+</html>

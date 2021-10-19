@@ -1,0 +1,53 @@
+<html>
+	<head>
+		<script>
+			var item='["Apple","Mango","Bannana","Mobile","Milk"]';
+			getJson = () =>{
+				alert(item.length);//to get string length
+				document.getElementById("abc").innerText = item;
+			}
+			getArray = () =>{
+				var itemArray = JSON.parse(item);//json to arry
+				alert(itemArray.length);//array length
+			
+			
+			//user ->browser->html->js(json)->php(json to array)->mysql(ajax,api,j-ajax)
+			//user <-browser<-htm<-js(loop-json to array)<-php(json to array)<-mysql(ajax,api,j-ajax)
+			
+			var mydata = "<h2>Available items in ascending order</h2>";
+			for (var i=0; i<itemArray.length;i++){
+				mydata = mydata +"<p>"+itemArray[i]+"</p>"
+			}
+			document.getElementById("abc2").innerHTML=mydata;
+		}
+		getAbc = () =>{
+				var itemArray = JSON.parse(item);//json to arry
+				alert(itemArray.length);//array length
+			
+			
+			//user ->browser->html->js(json)->php(json to array)->mysql(ajax,api,j-ajax)
+			//user <-browser<-htm<-js(loop-json to array)<-php(json to array)<-mysql(ajax,api,j-ajax)
+			
+			var mydata = "<h2>Available items in descending oder</h2>";
+			for (var i=itemArray.length-1; i>=0;i--){
+				mydata = mydata +"<p>"+itemArray[i]+"</p>"
+			}
+			document.getElementById("abc3").innerHTML=mydata;
+		}
+		</script>
+	</head>
+	<body>
+		<center>
+			<h1>Json parsing simple Examppe</h1>
+			<button onclick="getJson()">Get Json</button>
+			<button onclick="getArray()">Get Array</button>
+			<button onclick="getAbc()">Reverse Array</button>
+			<div id="abc"><div>
+			<br/><br/>
+			<div id="abc2"><div>
+			<br/><br/>
+			<div id="abc3"></div>
+			<br/><br/>
+		</center>
+	</body>
+</html>

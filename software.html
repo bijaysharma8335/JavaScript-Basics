@@ -1,0 +1,29 @@
+<html>
+<head>
+	<script>
+		getData=()=>
+			{
+				var message="Bangalore is best place for it software development.";
+				var msg=message.split(" ");//string to array
+				var data="";
+				for( var i=0;i<msg.length;i++)
+				{		
+					if(i%2==0)
+					{
+						data=data+"<p>"+msg[i] + "</p>";
+				}
+}
+			document.getElementById("mymessge").innerHTML=data;
+		}
+	</script>
+</head>
+<body>
+<center>
+	<h1>String Array Example</h1>
+	<button onclick="getData()">Show Odd string</button>
+	
+	<br/><br/>
+	<div id="mymessge"></div>
+</center>
+</body>
+</html>

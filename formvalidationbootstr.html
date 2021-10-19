@@ -1,0 +1,135 @@
+<html>
+<head>
+<script>
+	validate=()=>
+	{
+		var name=document.getElementById("fname").value;
+		if(name=="")
+		{
+			document.getElementById("nameerror").innerText="Enter Your Name !";
+		}
+		else
+		{
+			document.getElementById("nameerror").innerText="";
+		}
+
+		//mobile no validation
+		var mobile=document.getElementById("mobile").value;
+		var mpattern=/^[6-9]\d{9}$/;
+		//if((mobile=="")||(mobile.length !=10)||(is(NaN(mobile))))
+		if(!mpattern.test(mobile))
+		{
+			document.getElementById("mobileerror").innerText="Enter Mobile No !";
+		}
+		else
+		{
+			document.getElementById("mobileerror").innerText="";
+		}
+
+		//email validation
+		let epattern = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+var email=document.getElementById("emailId").value;
+if(!epattern.test(email))
+{
+	document.getElementById("emailerror").innerText="Enter Email Id !";
+	}
+	else
+	{
+	document.getElementById("emailerror").innerText="";	
+	}
+	//password validation
+		
+var pass=document.getElementById("password").value;
+if((pass.length<6)||(pass.length>8))
+{
+	document.getElementById("passworderror").innerText="Enter Password 6-8 char !";
+	}
+	else
+	{
+	document.getElementById("passworderror").innerText="";	
+	}
+	//Gender  Validation
+var male=document.getElementById("male").checked;
+var female=document.getElementById("female").checked;
+if((male==false)&&(female==false))
+{
+	document.getElementById("gendererror").innerText="Select Your Gender!";
+
+}
+else{
+	document.getElementById("gendererror").innerText="";
+}
+//Address Validation
+var add=document.getElementById("addr").value;
+		if(add=="")
+		{
+			document.getElementById("adderror").innerText="Enter Your Address !";
+		}
+		else
+		{
+			document.getElementById("adderror").innerText="";
+		}
+}
+clearall=()=>
+{
+	document.getElementById("nameerror").innerText="";
+	document.getElementById("emailerror").innerText="";	
+	document.getElementById("passworderror").innerText="";	
+	document.getElementById("gendererror").innerText="";
+	document.getElementById("adderror").innerText="";
+
+}
+</script>
+<style >
+	.error{
+		color: red;
+		font-style: italic;
+	}
+</style>
+</head>
+<body>
+	<form>
+		
+	
+<table align="center" cellpadding="10" width="500">
+	<caption><h2>Form Validation in Javascript</h2></caption>
+	<tr>
+		<th>Full Name</th>
+		<td><input type="text" id="fname"/><p id="nameerror" class="error"></p></td>
+	</tr>
+	<tr>
+		<th>Mobile No</th>
+		<td><input type="number"  id="mobile"/><p id="mobileerror" class="error"></p></td>
+	</tr>
+	<tr>
+		<th>Email</th>
+		<td><input type="email"  id="emailId"/><p id="emailerror" class="error"></p></td>
+	</tr>
+	<tr>
+		<th>Password</th>
+		<td><input type="password"  id="password"/><p id="passworderror" class="error"></p></td>
+	</tr>
+	<tr>
+		<th>Gender</th>
+		<td><input type="radio"  id="male" name="gender" />Male
+			<input type="radio"id="female"name="gender"/>Female
+			<p id="gendererror" class="error"></p></td>
+	</tr>
+	<tr>
+	<th>Address</th>
+		<td><textarea id="addr"  rows="5" cols="30"></textarea>
+
+			<p id="adderror" class="error"></p>
+		</td>
+		</tr>
+		
+	<tr>
+	<th colspan="2">
+<button type="button"onclick="validate()">Register</button>
+<button type="reset" onclick="clearall()">Reset</button>
+</th>
+</tr>
+</table>
+</form>
+</body>
+</html>

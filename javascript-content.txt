@@ -1,0 +1,46 @@
+popup window in javascript
+	->alert()
+	->confirm()
+	->prompt()
+------------------------------
+Type of user defined function in javascript 
+--------------------------------
+Control Structure
+
+	Condition
+		->if else
+		->if else if
+		->nested if
+		->switch case
+
+	Loop
+		->for loop
+		->while loop
+		->do while
+---------------------------------
+Events
+	->Mouse-
+		onclick
+		ondblclick
+		onmousemove
+		onmouseout
+		onmousedown
+		onchange
+
+	->Keyboard
+		onkeypress
+		onkeydown
+		onkeyup
+		onfocus
+		onblur
+
+	->Body
+		onload
+		
+	->Form
+		onsubmit
+-------------------------------
+Javascript communicate with output element using
+	1.innerText -it send and receive contents in text format
+	2.innerHTML -it send and receive contents in HTML format
+

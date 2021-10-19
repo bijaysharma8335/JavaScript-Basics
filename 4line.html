@@ -1,0 +1,33 @@
+<html>
+<head>
+	<script>
+		var item=["apple","mango",200,"milk","Book"];
+		one=()=>
+		{
+			
+		var data="";
+		for(var i=0;i<item.length;i++)
+		{
+			//data=data +item[i] +"<br/>";
+			data=data +"<p class ='abc'>" +item[i] +"</p>";
+		}
+		alert(data);
+		document.getElementById("itemlist").innerHTML =data;		
+			}
+			
+
+	</script>
+	<style >
+		.abc
+		{
+			margin:1%;float:left;width: 23%; text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<h1> Javascript Array Simple Example</h1>
+<button onclick="one()">Show Length</button>
+<h2 id="total"></h2>
+<div id="itemlist">
+</body>
+</html>

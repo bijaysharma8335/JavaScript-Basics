@@ -1,0 +1,30 @@
+<html>
+<head>
+	<script>
+		getData=(remainder)=>
+			{
+				var message="Hi How are you Today ?";
+				var msg=message.split(" ");//string to array
+				var data="";
+				for( var i=0;i<msg.length;i++)
+				{		
+					if(msg[i].length%2==remainder)
+					{
+						data=data+"<p>"+msg[i] + " - " + msg[i].length + "</p>";
+				}
+}
+			document.getElementById("mymessge").innerHTML=data;
+		}
+	</script>
+</head>
+<body>
+<center>
+	<h1>String Array Example</h1>
+	<button onclick="getData(1)">Show Odd No Message</button>
+	<button onclick="getData(0)">Show Even No Message</button>
+	
+	<br/><br/>
+	<div id="mymessge"></div>
+</center>
+</body>
+</html>

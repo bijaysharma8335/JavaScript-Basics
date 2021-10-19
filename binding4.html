@@ -1,0 +1,62 @@
+<html>
+<head>
+	<script>
+		one=()=>
+		{
+document.getElementById("myphoto").src="1.jpg";
+		}
+		two=()=>
+		{
+document.getElementById("myphoto").src="2.jpg";
+		}
+		three=()=>
+		{
+document.getElementById("myphoto").src="3.jpg";
+		}
+		four=()=>
+		{
+document.getElementById("myphoto").height=100;
+document.getElementById("myphoto").width=100;
+		}
+		five=()=>
+		{
+document.getElementById("myphoto").height=200;
+document.getElementById("myphoto").width=200;
+		}
+		six=()=>
+		{
+document.getElementById("myphoto").height=300;
+document.getElementById("myphoto").width=300;
+		}
+seven=()=>
+		{
+document.getElementById("myphoto").style.borderRadius="50%";
+
+		}
+		eight=()=>
+		{
+document.getElementById("myphoto").style.border="10px solid red";
+
+		}
+
+	</script>
+</head>
+<body>
+	<center>
+	<h1>javascript and image binding example</h1>
+	<p>
+		<button onclick="four()">small</button>
+		<button onclick="five()">Medium</button>
+		<button onclick="six()">Large</button>
+		<button onclick="seven()">Image Circle</button>
+		<button onclick="eight()">Apply Border</button>
+	</p>
+	<img src="1.jpg" height="200" width="300" id="myphoto">
+	<p>
+		<button onclick="one()">1 pic</button>
+		<button onclick="two()">2 pic</button>
+		<button onclick="three()">3 pic</button>
+	</p>
+	</center>
+</body>
+</html>

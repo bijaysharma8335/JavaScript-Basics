@@ -1,0 +1,42 @@
+<html>
+<head>
+	<script>
+		Save=()=>
+		{
+			var a=document.getElementById("fname").value;
+			var b=document.getElementById("city").value;
+			var c=document.getElementById("age").value;
+			var d=document.getElementById("edu").value;
+			
+			var newuser={"name":a,"city":b,"age":c,"edu":d};
+			if(localStorage.getItem("user")==null)
+			{
+				var user=[];
+				user=user.concat(newuser);
+				localStorage.setItem("user",JSON.stringify(user));
+			}
+			else
+			{
+				var olduser=JSON.parse(localStorage.getItem("user"));
+				olduser=olduser.concat(newuser);
+				localStorage.setItem("user",JSON.stringify(olduser));
+			}
+			//JSON.stringify(user):array to JSON
+			//JSON.stringify(olduser): JSON to array
+			//
+
+			window.location.href="userlist.html";
+		}
+	</script>
+</head>
+<body>
+		<h1>Add New Customer</h1>
+		
+		<p>Full Name:<input type="text" id="fname"/> </p>
+		<p>City:<input type="text" id="city"/></p>
+		<p>Age:<input type="text" id="age"/></p>
+		<p>Education:<input type="text" id="edu"/></p>
+
+		<button onclick="Save()">Save Data</button>
+</body>
+</html>

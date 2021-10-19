@@ -1,0 +1,38 @@
+<html>
+<head>
+	<script>
+		Save=()=>
+		{
+			var a=document.getElementById("fname").value;
+			localStorage.setItem("name",a);
+
+
+			var b=document.getElementById("city").value;
+			localStorage.setItem("city",b);
+
+			var c=document.getElementById("age").value;
+			localStorage.setItem("age",c);
+
+			var d=document.getElementById("edu").value;
+			localStorage.setItem("edu",d);
+
+			
+			alert("Data stored in localStorage");
+			window.location.href="localfetch.html";
+		}
+	</script>
+</head>
+<body>
+		<h1>Local Storage Use to store data in browser Memory</h1>
+		<p>Local Storage willhold data in  memory if browser get close</p>
+		<p>localStorage.setItem();Use to store the data</p>
+		<p>localStorage.getItem();Use to fetch the data</p>
+		<p>localStorage.clear();Use to delete all the data</p>
+		<p>Full Name:<input type="text" id="fname"/> </p>
+		<p>City:<input type="text" id="city"/></p>
+		<p>Age:<input type="text" id="age"/></p>
+		<p>Education:<input type="text" id="edu"/></p>
+
+		<button onclick="Save()">Save Data</button>
+</body>
+</html>

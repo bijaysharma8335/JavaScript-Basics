@@ -1,0 +1,83 @@
+<html>
+<head>
+	<script >
+	var item=[];
+
+
+	getItem = () =>
+		{  
+			
+			
+			var data ="<h2></h2>";
+			
+			for (var i=0;i<item.length;i++)
+			{
+				data+="<tr>";
+				data += "<td>" + i +"</td>";
+				data +="<td>" + item[i] +"</td>";
+				data = data + "<td><button onclick='delitem("+i+")'>Delete</button</td>";
+				data += "</tr>";
+
+			}
+
+			
+			document.getElementById("alluser").innerHTML=data;
+		}
+		
+		save=()=>
+		{
+			var newitem=document.getElementById("newitem").value;
+			item.push(newitem);
+			getItem();//to reload the item
+			document.getElementById("newitem").value="";
+		}
+		delitem=(index)=>
+		{
+			var sts=confirm("Are You Sure?");
+			if (sts==true)
+			{
+				var itemname=item[index];
+				item.splice(index,1);// 0 to add and 1 for delete
+			getItem();//to reload the List
+document.getElementById("msg").innerText= itemname +  " Deleted ! ";
+			}
+			
+		}
+	</script>
+	<style>
+		tr:hover{
+			background: pink;
+			height: 30px;
+			color:green;
+			cursor: pointer;
+
+		}
+	</style>
+</head>
+<body onload="getItem()">
+	<center>
+	<h1 align="center" id="total"></h1>
+	<p>
+		New Item:<input type="text" id="newitem">
+		<button onclick="save()">Save</button>
+	</p>
+	<p align="center" id="msg"></p>
+
+		<table align="center" cellpadding="10" width="50%" border="1">
+	<thead>
+		<tr>
+			<th>Sl No</th>
+			<th>Name</th>
+			<th>Action</th>
+			</tr>
+
+	</thead>
+	<tbody id="alluser">
+
+
+	</tbody>
+</table>
+	<div id="itemlist"></div>
+</center>
+</body>
+</html>

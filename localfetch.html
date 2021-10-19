@@ -1,0 +1,38 @@
+<html>
+<head>
+	<script>
+		getData=()=>
+		{
+			var fullname=localStorage.getItem("name");
+			var city=localStorage.getItem("city");
+			var age=localStorage.getItem("age");
+			var education=localStorage.getItem("edu");
+
+			document.getElementById("name").innerText=fullname;
+			document.getElementById("city").innerText=city;
+			document.getElementById("age").innerText=age;
+			document.getElementById("edu").innerText=education;
+
+			
+
+		}
+		clearData=()=>
+		{
+			localStorage.clear();
+			window.location.reload();
+		}
+	</script>
+</head>
+<body onload="getData()">
+	<center>
+<h1>Data from Local Storage</h1>
+<button onclick="clearData()">Clear All</button>
+<h2 id="name"></h2>
+<h2 id="city"></h2>
+<h2 id="age"></h2>
+<h2 id="edu"></h2>
+<a href="localstorage.html">Update Info</a>
+
+</center>
+</body>
+</html>

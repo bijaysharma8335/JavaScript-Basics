@@ -1,0 +1,28 @@
+<html>
+<head>
+	<script>// for hide -none
+			//for show -inline,block
+		one=(input)=>
+
+	{
+		if(input==1){
+			document.getElementById("msg").style.display="none";
+		}
+		else
+		{
+		document.getElementById("msg").style.display="inline";	
+		}
+	}
+		
+	</script>
+</head>
+<body>
+<center>
+	<h1>Javascript hide show(display) property example</h1>
+	
+	<button onclick="one('1')">Hide - Display-none</button>
+	<button onclick="one('2')">Hide - Display-blocks</button>
+	<h1 id="msg">This block will hide and show on button click</h1>
+</center>
+</body>
+</html>

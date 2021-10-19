@@ -1,0 +1,70 @@
+<html>
+<head>
+	<script>
+		var item=[
+		{"name":"Apple","Price":"200","qty":"5"},
+		{"name":"Mobile","Price":"100","qty":"7"},
+		{"name":"Mango","Price":"300","qty":"5"},
+		{"name":"Orange","Price":"600","qty":"5"},
+		{"name":"Grapes","Price":"300","qty":"8"},
+		{"name":"Banana","Price":"700","qty":"15"}];
+		getItem=()=>
+		{
+			var data="";
+			for(var i=0;i<item.length;i++)
+			{
+				data=data+"<tr>";
+				data=data+"<td>"+ i+"</td>";
+				data=data+"<td>"+item[i].name+"</td>";
+				data=data+"<td>"+item[i].Price+"</td>";
+				data=data+"<td>"+item[i].qty+"</td>";
+				data=data+"<td>----------</td>";
+				data=data+"</tr>";
+			}
+			document.getElementById("itemlist").innerHTML=data;
+
+		}
+		save=()=>
+		{
+			var a = document.getElementById("newitem").value;
+			var p = document.getElementById("newprice").value;
+			var q = document.getElementById("newqty").value;
+
+			var newproduct={"name":a,"Price":p,"qty":q};
+			item=item.concat(newproduct);//to concate array in array
+			getItem();//to reloa the list
+			var a = document.getElementById("newitem").value;
+			var p = document.getElementById("newprice").value;
+			var q = document.getElementById("newqty").value;
+
+		}
+
+	</script>
+</head>
+<body onload="getItem()">
+	<table align="center" cellpadding="10">
+		<tr>
+			<td>Name<br/><input type="text" id="newitem"></td>
+			<td>Price<br/><input type="text" id="newprice"></td>
+			<td>Quantity<br/><input type="text" id="newqty"></td>
+			<td><button onclick="save()">Save Item</button>
+		</tr>
+
+	</table>
+<table align="center" cellpadding="10" border="1">
+	<thead>
+		<tr>
+			<th>Sl No</th>
+			<th>Product Name</th>
+			<th>price</th>
+			<th>Quantity</th>
+			<th>Action</th>
+		</tr>
+	</thead>
+	<tbody id="itemlist">
+
+		
+	</tbody>
+</table>
+</body>
+</html>

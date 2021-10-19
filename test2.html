@@ -1,0 +1,40 @@
+<html>
+	<head>
+	<script>
+		printName=()=>
+		{
+			var city="Bangalore";
+
+			var data="Bangalore";
+			for( var i=0;i<city.length;i++)
+			{
+				 			data=data+"<p>"+city[i]+"</p>";
+
+			}
+			document.getElementById("abc").innerHTML=data;
+					}
+
+		printName1=()=>
+		{	var city="Bangalore";
+
+			var data="Bangalore";
+			for( var i=city.length-1;i>=0;i--)
+			{
+		 			data=data+"<p>"+city[i]+"</p>";
+
+			}
+			document.getElementById("abc").innerHTML=data;
+
+		}	
+	</script>
+	</head>
+<body>
+<center>
+	<h1>String Array Example</h1>
+	<button onclick="printName()">Show Name in Asc</button>
+	<button onclick="printName1()">Show Name in Dsc</button>
+	<br/><br/>
+	<div id="abc"></div>
+</center>
+</body>
+</html>

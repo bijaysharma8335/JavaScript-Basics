@@ -1,0 +1,45 @@
+<html>
+<head>
+	
+	<script>
+	test=()=>{
+		alert("Working....");
+	}	
+	test2=(cityname) =>{
+		alert(cityname);
+	}
+	</script>
+</head>
+<body onload="test2('this is on pageload')">
+<h1>Javascript Mouse Events simple Example</h1>
+<center><button onclick="test()">1 Click</button>
+	<button ondblclick="test()">2 Click</button>
+	<button onmousemove="test()">Move Your Mouse Here</button>
+	<button onmouseout="test()">Move Your Mouse Out</button>
+	<button onmousedown="test()">Mouse Down,Left| Right Click</button>
+
+	On Change:<select onchange="test2(this.value)">
+		<option value="">Choose</option>
+		<option value="Mumbai">Mumbai</option>
+		<option value="Chennai">Chennai</option>
+		<option value="Pune">Pune</option>
+	</select>
+	<h1>Javascript Keyboard Events Examples</h1>
+	<p>
+		Onkey Press:<input type="text" onkeypress="test2(this.value)"/>
+	</p>
+	<p>
+	Onkey up:<input type ="text" onkeyup="test2(this.value)"/>
+</p>
+<p>
+	Onkey down:<input type ="text" onkeydown="test2(this.value)"/>
+	</p>
+	<p>
+	On Focus:<input type="text" onfocus="test2(this.value)" />
+</p>
+<p>
+	On Blur:<input type="text" onblur="test2(this.value)"/>
+</p>
+	</center>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<html>
+<head>
+	<script>
+		one=()=>
+		{
+			var name=document.getElementById("fname").value;
+			document.getElementById("abc").innerText=name;
+		}
+	</script>
+</head>
+<body>
+<center>
+	<h1> InnerText and value Example</h1>
+	<p>
+		Your Name:<input type="text" id="fname" value="Hello"/>
+		<button onclick="one()">Show My Name </button>
+	</p>
+	<h1 id="abc"></h1>
+</center>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<html>
+<head>
+	<script >
+		printv=()=>
+		{
+		var data="";
+		var total=0;
+		for( var i=1;i<=10;i++)
+			{
+				data=data+"<p>"+i+"</p>";
+				total=total+i;
+			}
+			document.getElementById("abc").innerHTML=data +"<hr/>"+total;
+			
+		}
+	</script>
+
+</head>
+<body onload="printv()">
+<center>
+		<h1>Numbers And Their Sum</h1>
+
+	<div id="abc"></div>
+</center>
+</body>
+</html>

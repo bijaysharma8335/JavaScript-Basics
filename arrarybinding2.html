@@ -1,0 +1,63 @@
+<html>
+<head>
+	<script>
+		var item=["Book","pen","Mouse","Laptop","Mobile"];
+		getItem =  () =>
+		{
+			var data ="";
+			for (var i=0; i<item.length; i++)
+			{
+				data = data + "<tr>";
+				data = data + "<td>"+ i +"</td>";
+				data = data + "<td>"+ item[i] +"</td>";
+				data = data + "<td><button onclick='delitem("+i+")'>Delete</button</td>";
+				data = data + "</tr>";
+			}
+			document.getElementById("itemlist").innerHTML=data;
+		}
+		save=()=>
+		{
+			var newitem=document.getElementById("newitem").value;
+			//item.push(newitem);//to add at end of array
+			item.unshift(newitem);//to add at beginning  of array
+			getItem();//to reload the List
+			document.getElementById("newitem").value="";
+			document.getElementById("msg").innerText=newitem + "  Added  !";
+
+		}
+		delitem=(index)=>
+		{
+			var sts=confirm("Are You Sure?");
+			if (sts==true)
+			{
+				var itemname=item[index];
+				item.splice(index,1);// 0 to add and 1 for delete
+			getItem();//to reload the List
+document.getElementById("msg").innerText= itemname +  " Deleted ! ";
+			}
+			
+		}
+	</script>
+</head>
+<body onload="getItem()">
+	<p align="center">
+		New Item Name:<input type="text" id="newitem"/>
+		<button onclick="save()">Save Item</button>
+	</p>
+	<p align="center" id="msg"></p>
+
+<table align="center" cellpadding="15" width="500" border="1">
+	<thead>
+		<tr>
+		<th>Item Index</th>
+			<th>Item Name</th>
+			<th>Action</th>
+
+		</tr>
+	</thead>
+	<tbody id="itemlist">
+		
+	</tbody>
+</table>
+</body>
+</html>

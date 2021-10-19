@@ -1,0 +1,38 @@
+<html>
+<head>
+	<script>
+		getData=()=>
+		{
+			var fullname=sessionStorage.getItem("name");
+			var city=sessionStorage.getItem("city");
+			var age=sessionStorage.getItem("age");
+			var education=sessionStorage.getItem("edu");
+
+			document.getElementById("name").innerText=fullname;
+			document.getElementById("city").innerText=city;
+			document.getElementById("age").innerText=age;
+			document.getElementById("edu").innerText=education;
+
+			
+
+		}
+		clearData=()=>
+		{
+			sessionStorage.clear();
+			window.location.reload();
+		}
+	</script>
+</head>
+<body onload="getData()">
+	<center>
+<h1>Data from Session Storage</h1>
+<button onclick="clearData()">Clear All</button>
+<h2 id="name"></h2>
+<h2 id="city"></h2>
+<h2 id="age"></h2>
+<h2 id="edu"></h2>
+<a href="sessionstorage1.html">Update Info</a>
+
+</center>
+</body>
+</html>

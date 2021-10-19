@@ -1,0 +1,66 @@
+<html>
+<head>
+	<script>
+		getUser=()=>
+		{
+		if(localStorage.getItem("user") !=null){
+			var userlist=JSON.parse(localStorage.getItem("user"));
+			//console.log(userlist);
+			userlist.reverse();
+			var data = "";
+			for(var i = 0;i<userlist.length; i++){
+				if(i%2==0){
+					data +="<tr  bgcolor='skyblue'>";
+
+				}
+				else
+				{
+					data += "<tr bgcolor='orange'>";
+				}
+		
+				data += "<td>" + i +"</td>";
+				data +="<td>" + userlist[i].name +"</td>";
+				data +="<td>" + userlist[i].city +"</td>";
+				data +="<td>" + userlist[i].age +"</td>";
+				data +="<td>" + userlist[i].edu +"</td>";
+ 				data += "</tr>";
+ 				
+
+			}document.getElementById("alluser").innerHTML=data;
+			var abc="Total Users are:"+userlist.length;
+			document.getElementById("total").innerHTML=abc;
+
+		}
+	}
+	</script>
+	<style>
+		tr:hover{
+			background: pink;
+			height: 30px;
+			color:green;
+			cursor: pointer;
+
+		}
+	</style>
+</head>
+<body onload="getUser()">
+	<center>
+<a href="newuser.html">Add User</a>
+</center>
+<h1 align="center" id="total">Total users are:</h1>
+<table align="center" cellpadding="10" width="50%">
+	<thead>
+		<tr>
+			<th>Sl No</th>
+			<th>Full Name</th>
+			<th>City</th>
+			<th>Age</th>
+			<th>Education</th>
+		</tr>
+
+	</thead>
+	<tbody id="alluser">
+	</tbody>
+</table>
+</body>
+</html>
