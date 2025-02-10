@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            .parent {
+                background-color: #e9a5f0;
+                width: 400px;
+                height: 400px;
+            }
+            .child {
+                background: #e93c21;
+                height: 50%;
+                width: 50%;
+            }
+
+            
+            .parent:hover .child {
+                background-color: #e93c21;
+                /* transform: translateX(100%); */
+                animation-name: myframes;
+                animation-duration: 3s;
+                animation-timing-function: ease-in;
+                animation-fill-mode: forwards;
+                /* animation-iteration-count: 3s; */
+                animation-iteration-count: 3;
+                animation-direction: alternate;
+            }
+            @keyframes myframes {
+                0% {
+                    transform: translateX(0);
+                }
+                33% {
+                    transform: translateY(100%);
+                }
+                66% {
+                    transform: translateX(100%) translateY(100%);
+                }
+                100% {
+                    transform: translateX(100%);
+                }
+            }
+        </style>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>CSS Animations</title>
+    </head>
+    <body>
+        <div class="parent">
+            <div class="child"></div>
+        </div>
+    </body>
+</html>
