@@ -1,0 +1,13 @@
+arrays
+loops
+object
+this keyword
+functions
+form validation
+regex
+email validation
+promises
+async await 
+
+
+array operations
