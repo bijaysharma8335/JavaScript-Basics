@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Javascript async await</title>
+    </head>
+    <body>
+        <!-- <script>
+            var value = 50;
+
+            function my_Function() {
+                var value = 100;
+                alert("Value" +value);
+                alert("This value: " + this.value);
+            }
+            my_Function();
+        </script> -->
+
+        <script>
+            const random = {
+                name: "John",
+                video: ["js", "this", "keyword"],
+                info() {
+                    this.video.forEach(function(tag) {
+                        console.log(this.name,tag);
+                    },this)
+
+                    // console.log("Hi" + this.name);
+                },
+            };
+            random.info();
+        </script>
+    </body>
+</html>

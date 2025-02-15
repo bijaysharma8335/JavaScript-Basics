@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Email Validation</title>
+        <script>
+            function validate() {
+                var mail = document.getElementById("text").value;
+                var regx = "/^([a-zA-Z0-9\._]+)@([a-zA-Z0-9]+([a-z]+)(.[a-z]+)?$/";
+                if (regex.text(mail)) {
+                    alert("You have provided a valid email ");
+                    return true;
+                }
+                alert("Email is invalid.Please provide valid email ");
+            }
+        </script>
+    </head>
+    <body>
+        <form>
+            <input type="text" id="text" placeholder="email" /><br />
+            <button onclick="validate()" type="button">Submit</button>
+        </form>
+    </body>
+</html>

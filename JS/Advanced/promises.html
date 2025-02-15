@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Javascript Promises</title>
+    </head>
+    <body>
+        <h1>Javascript Promises</h1>
+        <p id="demo"></p>
+        <script>
+            // let car = new Promise(function (resolve, reject) {
+            //     fuel_fullTank = false;
+            //     if (fuel_fullTank) {
+            //         resolve("car is ready to go");
+            //     } else {
+            //         reject("car is not ready to go");
+            //     }
+            // });
+            // car.then(function (result) {
+            //     document.write("The fuel tank is full. happy Driving");
+            // }).catch(function (error) {
+            //     document.write("The fuel tank is not empty");
+            // });
+
+            let empty_tank = function (msg = "") {
+                return new Promise(function (resolve, reject) {
+                    resolve(msg + "The car does not have enough fuel");
+                });
+            };
+            /**
+             * @description
+             *      This function returns a promise
+             *      that resolves with the string
+             *      "The engine is over heating"
+             * @returns {Promise}
+             */
+            let engine = function (msg) {
+                return new Promise(function (resolve, reject) {
+                    resolve(msg + "The engine is over heating");
+                });
+            };
+            let travel = function (msg) {
+                return new Promise(function (resolve, reject) {
+                    resolve(msg + "The car is not safe for travelling.");
+                });
+            };
+            empty_tank()
+                .then(function (result) {
+                    return engine(result);
+                })
+                .then(function (result) {
+                    return travel(result);
+                })
+                .then(function (result) {
+                    console.log("Done !" + result);
+                });
+        </script>
+    </body>
+</html>

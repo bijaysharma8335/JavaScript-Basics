@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Javascript objects</title>
+    </head>
+    <body>
+        <h1>Creating Javascript objects</h1>
+        <p id="demo"></p>
+        <script>
+            var car = {
+                modal: "BMW",
+                color: "Navy Blue",
+                fuel_type: "Diesel",
+                get fuel() {
+                    return this.fuel_type;
+                },
+            };
+            document.getElementById("demo").innerHTML = car.fuel;
+        </script>
+        <script>
+            var car = {
+                modal: "Audi",
+                color: "Red",
+                fuel_type: "",
+                set fuel(fuel) {
+                    return this.fuel_type=fuel;
+                },
+            };
+            car.fuel='petrol'
+            document.getElementById("demo").innerHTML = car.fuel_type;
+        </script>
+    </body>
+</html>

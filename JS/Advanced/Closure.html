@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Closure</title>
+        <p id="demo"></p>
+    </head>
+    <body>
+        <!-- <script>
+            let x = 10;
+            function my_Function() {
+                let y = 20;
+                document.write(x + y);
+            }
+            my_Function();
+        </script> -->
+
+        <!-- closure :a feature where an inner function has access to the outer function variable  -->
+        <script>
+            var a = 10;
+            function first_Function() {
+                let b = 20;
+                function second_Function() {
+                    let c = 20 + a + b;
+                    return c;
+                }
+                return second_Function();
+            }
+            var sum = first_Function();
+            document.write("The sum is:" + sum);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,8 @@
+body{
+    background-image: url(tech.jpg);
+    background-size: cover;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #8db5ed;
+    background-blend-mode: screen;
+}

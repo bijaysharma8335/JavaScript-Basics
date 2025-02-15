@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Pseudo Class</title>
+        <style>
+            *{
+                font-size: 30px;
+            }
+            q::before{
+                content:"<<";
+                color: blue;
+            }
+            q::after{
+                content:">>";
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <q>Welcome to Css</q> To <q> front end development</q>
+    </body>
+</html>

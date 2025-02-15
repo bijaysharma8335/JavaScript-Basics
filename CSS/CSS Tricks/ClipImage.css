@@ -1,0 +1,9 @@
+
+.tr {
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    height: 60%;
+    width: 60%;
+    background-color: #8db5ed;
+    z-index:-1;
+    position: absolute;
+}
