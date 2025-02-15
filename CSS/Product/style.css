@@ -1,0 +1,129 @@
+body {
+    margin: 0;
+    font-family: "Abel", sans-serif;
+    background: #fb923c;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+p {
+    margin: 0;
+}
+.card {
+    display: flex;
+    height: 500px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.card_image {
+    width: 300px;
+    height: 50px;
+}
+.card_image img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.card_content {
+    width: 300px;
+    background: #fff;
+    padding: 2.5rem 1.75em;
+}
+
+.card_content_tag {
+    display: flex;
+    gap: 1rem;
+}
+
+.card_content_tag span {
+    background: #e9e9e9;
+    font-size: 0.75rem;
+    border-radius: 8px;
+    padding: 0.15rem 0.25rem;
+}
+.card_content_title {
+    margin-top: 2rem;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.card_content_info {
+    margin-top: 0.5rem;
+    text-align: justify;
+    font-size: 0.9rem;
+    line-height: 1.4;
+
+    color: #333;
+}
+
+.card_content_config {
+    margin-top: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.card_content_config .colors {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.card_content_config .price {
+    font-size: 2rem;
+}
+.card_content_config .prev_price {
+    font-size: 0.8rem;
+    text-decoration: line-through;
+    font-weight: 700;
+    margin-left: 0.25rem;
+    color: #dc2626;
+}
+.card_content_config .colors .color {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    padding: 2px;
+    display: inline-block;
+}
+.colors .color1 {
+    background: #232323;
+}
+.colors .color2 {
+    background: #fb923c;
+}
+.colors .color3 {
+    background: #ef4444;
+}
+
+.card_content_action {
+    margin-top: 2rem;
+    display: flex;
+    gap: 0.5rem;
+}
+.card_content_action button{
+    all: unset;
+    background: #232343;
+    color: #fff;
+    padding: 0.5rem 0.75rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.socials{
+    position: fixed;
+    bottom :20px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap:0.5rem;
+}
+.socials a{
+    color:#fff;
+    width: 40px;
+    height: 20px;
+    display: grid;
+    place-items: center;
+    border: 1px solid #fff;
+    border-radius: 25%;
+    text-decoration: none;
+}
